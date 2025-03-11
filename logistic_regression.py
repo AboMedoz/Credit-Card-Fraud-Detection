@@ -11,9 +11,6 @@ class LogisticRegression:
     def sigmiod(self, z):
         return 1 / (1 + np.exp(-z))
 
-    def compute_loss(self, y_test, y_pred):
-        return -np.mean(y_test * np.log(y_pred) + (1 - y_test) * (1 - np.log(y_pred)))
-
     def fit(self, x, y):
         n_samples, n_features = x.shape
         self.weight = np.zeros(n_features)

@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from logistic_regression import LogisticRegression
 
 
-x, y = make_classification(n_samples=1000, n_features=5, n_classes=2, random_state=42)
+x, y = make_classification(n_samples=1000, n_features=5, random_state=42)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
