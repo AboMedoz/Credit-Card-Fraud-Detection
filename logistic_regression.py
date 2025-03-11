@@ -30,7 +30,7 @@ class LogisticRegression:
             self.bias -= self.learning_rate * db
 
     def predict(self, x):
-        linear_model = np.dot(self.weight, x) + self.bias
+        linear_model = np.dot(x, self.weight) + self.bias
         y_predict = self.sigmiod(linear_model)
-        return (y_predict >= 0.5).as_type(int)
+        return (y_predict >= 0.5).astype(int)
 
