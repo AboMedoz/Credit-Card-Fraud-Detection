@@ -31,3 +31,6 @@ class LogisticRegression:
         y_predict = self.sigmiod(linear_model)
         return (y_predict >= 0.5).astype(int)
 
+    def predict_proba(self, x):
+        linear_model = np.dot(x, self.weight) * self.bias
+        return self.sigmiod(linear_model)
