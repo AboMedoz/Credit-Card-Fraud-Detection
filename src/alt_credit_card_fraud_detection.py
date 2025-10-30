@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 
 from logistic_regression import LogisticRegression
 
-data_frame = pd.read_csv('creditcard.csv')
+data_frame = pd.read_csv('dataset.csv')
 
 v = []
 for i in range(1, 29):

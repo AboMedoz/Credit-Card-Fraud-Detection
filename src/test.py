@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-from logistic_regression import LogisticRegression
+from Credit_Card_Fraud_Detection.src.logistic_regression import LogisticRegression
 
 
 x, y = make_classification(n_samples=1000, n_features=5, random_state=42)

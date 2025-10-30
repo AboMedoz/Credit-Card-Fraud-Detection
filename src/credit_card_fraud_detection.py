@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 import pandas as pd
 
 # https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
-data_frame = pd.read_csv('creditcard.csv')
+data_frame = pd.read_csv('dataset.csv')
 print(data_frame)
 
 # Features innit
