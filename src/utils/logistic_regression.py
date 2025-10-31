@@ -8,7 +8,7 @@ class LogisticRegression:
         self.weight = None
         self.bias = None
 
-    def sigmiod(self, z):
+    def sigmoid(self, z):
         return 1 / (1 + np.exp(-z))
 
     def fit(self, x, y):
@@ -18,7 +18,7 @@ class LogisticRegression:
 
         for _ in range(self.epoch):
             linear_model = np.dot(x, self.weight) + self.bias
-            y_predicted = self.sigmiod(linear_model)
+            y_predicted = self.sigmoid(linear_model)
 
             dw = (1 / n_samples) * np.dot(x.T, (y_predicted - y))
             db = (1 / n_samples) * np.sum(y_predicted - y)
@@ -28,9 +28,9 @@ class LogisticRegression:
 
     def predict(self, x):
         linear_model = np.dot(x, self.weight) + self.bias
-        y_predict = self.sigmiod(linear_model)
+        y_predict = self.sigmoid(linear_model)
         return (y_predict >= 0.5).astype(int)
 
     def predict_proba(self, x):
         linear_model = np.dot(x, self.weight) * self.bias
-        return self.sigmiod(linear_model)
+        return self.sigmoid(linear_model)
