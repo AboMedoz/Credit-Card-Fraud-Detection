@@ -42,5 +42,5 @@ accuracy_handmade = accuracy_score(y_test, y_predict_handmade) * 100
 print(f"Accuracy: {accuracy:.2f}")
 print(f"Accuracy from Handmade Model: {accuracy_handmade:.2f}")
 
-joblib.dump(model, os.path.join(MODELS_PATH, 'logistic_regression.h5'))
-joblib.dump(handmade, os.path.join(MODELS_PATH, 'handmade_logistic_regression.h5'))
+joblib.dump(model, os.path.join(MODELS_PATH, 'logistic_regression.pkl'))
+joblib.dump(handmade, os.path.join(MODELS_PATH, 'handmade_logistic_regression.pkl'))
