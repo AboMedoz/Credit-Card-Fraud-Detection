@@ -17,7 +17,6 @@ MODELS_PATH = os.path.join(ROOT, 'models')
 
 df = pd.read_csv(os.path.join(DATA_PATH, 'processed.csv'))
 
-
 x = df.drop(columns=['Class'])
 y = df['Class']
 
